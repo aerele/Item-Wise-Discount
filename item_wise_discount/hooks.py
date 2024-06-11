@@ -29,8 +29,8 @@ app_license = "mit"
 
 # include js in doctype views
 doctype_js = {
-    "Sales Order": "public/custom_script/sales_order.js",
-    "Sales Invoice": "public/custom_script/sales_invoice.js",
+    "Sales Order": "public/custom_script/sales_order.js"
+    # "Sales Invoice": "public/custom_script/sales_invoice.js",
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -72,6 +72,8 @@ doctype_js = {
 
 # before_install = "item_wise_discount.install.before_install"
 after_install = "item_wise_discount.install.after_install"
+after_migrate = "item_wise_discount.migrate.after_migrate"
+
 
 # Uninstallation
 # ------------

@@ -24,23 +24,6 @@ def make_custom_fields():
 				insert_after="discount_percentage",
 				read_only=1
 			)
-		],
-		"Sales Invoice": [
-			dict(
-				fieldname="custom_apply_discount",
-				label="Apply Discount",
-				fieldtype="Button",
-				insert_after="section_break_42",
-			)
-		],
-		"Sales Invoice Item": [
-			dict(
-				fieldname="custom_applied_discounts",
-				label="Applied Discounts",
-				fieldtype="Small Text",
-				insert_after="discount_percentage",
-				read_only=1
-			)
-		],
+		]
 	}
 	create_custom_fields(custom_fields)

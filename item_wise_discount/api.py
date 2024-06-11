@@ -21,6 +21,7 @@ def get_item_discount(customer, date, items):
 			discount_percentage *= 1-(percent[0]/100)
 
 		res_data[item] = {}
-		res_data[item]["value"] = (1 - discount_percentage) * 100
+		res_data[item]["value"] = (1 - discount_percentage) * 100 if len(percentage_list) > 1 else percentage_list[0][0] if len(percentage_list) == 1 else 0
 		res_data[item]["discount_list"] = ["{0}%".format(i[0]) for i in percentage_list]
+
 	return res_data
