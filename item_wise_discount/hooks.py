@@ -72,6 +72,8 @@ doctype_js = {
 
 # before_install = "item_wise_discount.install.before_install"
 after_install = "item_wise_discount.install.after_install"
+after_migrate = "item_wise_discount.install.after_migrate"
+
 
 # Uninstallation
 # ------------
