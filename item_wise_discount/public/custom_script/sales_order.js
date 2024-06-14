@@ -19,11 +19,19 @@ frappe.ui.form.on('Sales Order', {
 							if(row.item_code in res.message){
 								frappe.model.set_value(row.doctype, row.name, "discount_percentage", res.message[row.item_code].value);
 								frappe.model.set_value(row.doctype, row.name, "custom_applied_discounts", res.message[row.item_code].discount_list.join(', '));
+							}else{
+								frappe.model.set_value(row.doctype, row.name, "discount_percentage", "");
+								frappe.model.set_value(row.doctype, row.name, "custom_applied_discounts", "");
 							}
 						}
 					}
 				})
 			}
+		}else{
+			frm.doc.items?.forEach(row => {
+				frappe.model.set_value(row.doctype, row.name, "discount_percentage", "");
+				frappe.model.set_value(row.doctype, row.name, "custom_applied_discounts", "");
+			})
 		}
 	}
 })
